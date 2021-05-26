@@ -147,10 +147,28 @@
 
 
 
-			<nav class="navbar fixed-top navbar-expand-lg navbar-light white z-depth-5">
-			  <a class="navbar-brand" href="#">Fixed-Top Navbar</a>
-			</nav>
 
+
+
+				<nav class="navbar">
+				  <ul>
+					<li><a href="/">Position fixed</a></li>
+					<li><a href="/scroll.html">Scroll event</a></li>
+					<li><a href="/observer.html">Intersection observer</a></li>
+					<li><a href="/sticky.html">Position sticky</a></li>
+				  </ul>
+				</nav>
+				<div class="spot"></div>
+
+				.navbar {
+				  position: sticky;
+				  top: 0;
+				  background-color: transparent;
+				}
+
+				#content {
+				  background-color: aquamarine;
+				}
 
 
 
