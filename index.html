@@ -151,47 +151,32 @@
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 				<style>
 				
-				body {margin:0;}
+						body {
+						  margin: 0;
+						  padding: 0;
+						  background: url(https://occ-0-325-395.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABaKr-dQAdVTt7fuGCgzntgBBrFce2DMW72dF86eO7EnXbFZvzmX2TPnQAg3HwAsvt7ZnDnP0nwuHOtPwpWGGOE22fXq2.webp?r=847) top/contain no-repeat;
+						}
 
-				.navbar {
-				  overflow: hidden;
-				  background-color: #333;
-				  position: fixed;
-				  top: 0;
-				  width: 100%;
-				}
+						nav {
+						  position: -webkit-sticky;
+						  position: sticky;
+						  /* sticky or fixed are fine */
+						  position: fixed;
+						  top: 0;
+						  height: 69px;
+						  width: 100%;
+						  background: linear-gradient(to bottom, #000, #0003 70%,#0000); /* background when scroll is in the top */
+						  transition: background .5s; /* control how smooth the background changes */
+						}
 
-				.navbar a {
-				  float: left;
-				  display: block;
-				  color: #f2f2f2;
-				  text-align: center;
-				  padding: 14px 16px;
-				  text-decoration: none;
-				  font-size: 17px;
-				}
+						nav.scrolled {
+						  background: #0a0a0a;
+						}
 
-				.navbar a:hover {
-				  background: #ddd;
-				  color: black;
-				}
-				
-				.navbar-fixed-top.scrolled {
-				  background-color: #fff !important;
-				  transition: background-color 200ms linear;
-				}
-
-				.navbar-fixed-top.scrolled .nav-link {
-				  color:#555;
-				}						
-				
-
-				.main {
-				  padding: 16px;
-				  margin-top: 30px;
-				  height: 1500px; /* Used in this example to enable scrolling */
-				}
-				
+						main {
+						  height: 200vh;
+						}
+										
 
 
 				
