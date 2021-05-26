@@ -143,61 +143,31 @@
 	     
 	
 
-			<div id="nav_bar">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="process.html">My Process</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-
-
-			#nav_bar {
-				background-color: #000;
-				width:100%;
-				height:30px;
-				position:fixed;
-				margin:10px 0 0 0;
-				padding:0;
-			  top:0;
-				vertical-align:middle;
-				line-height:30px;
-				box-shadow: 2px 2px 5px #000;
-				z-index:2;
-			}
-
-			#nav_bar ul {
-				list-style:none;
-				margin:0;
-				padding:0;
-			}
-
-			#nav_bar li {
-				display:inline-block;
-				padding-left:40px;
-			}
-
-			#nav_bar a:link, a:visited, a:active {
-				color:#FFF;
-				font-size:24px;
-				text-decoration:none;
-				-webkit-transition: all .4s ease;
-				-moz-transition: all .4s ease;
-				-ms-transition: all .4s ease;
-				-o-transition: all .4s ease;
-				transition: all .4s ease;
-			}
-
-			#nav_bar a:hover {
-				color:#09C;
-				-webkit-box-shadow: 0px 3px 0px #09C;
-				-moz-box-shadow: 0px 3px 0px #09C;
-				box-shadow: 0px 3px 0px #09C;
-			}
-
-			h2 {
-			  font-size:45px;
-			}
+			<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="#" class="navbar-brand">Brand</a>
+					</div>
+					<!-- Collection of nav links and other content for toggling -->
+					<div id="navbarCollapse" class="collapse navbar-collapse" data-toggle="collapse" data-target="#navbarCollapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Messages</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">Login</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 
 
 
