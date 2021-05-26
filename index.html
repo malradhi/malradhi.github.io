@@ -194,6 +194,11 @@
 				  height: 1500px; /* Used in this example to enable scrolling */
 				}
 				
+				
+				$(window).scroll(function(){
+				$('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+				});
+				
 
 
 				
@@ -204,7 +209,7 @@
 
 				
 				<div class="navbar">
-				  <a href="#home">Home3</a>
+				  <a href="#home">Home33</a>
 				  <a href="#news">News</a>
 				  <a href="#contact">Contact</a>
 				</div>		
