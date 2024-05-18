@@ -1275,11 +1275,59 @@
 	   
 	  	
     </div>
-	
+-->	
 
-</body></html> -->
+
+
+<footer>
+    <p id="timeDisplay"></p>
+  </footer>
+
+  <script>
+    // Function to get local time
+    function getLocalTime() {
+      const date = new Date();
+      const timeString = date.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+      const dateString = date.toLocaleDateString([], {day: '2-digit', month: 'short'});
+      return `<strong>Your Time:</strong> ${timeString}, ${dateString}`;
+    }
+
+    // Function to get site time
+    function getSiteTime() {
+      // Replace 'https://malradhi.github.io/' with the actual URL of the site
+      fetch('https://malradhi.github.io/')
+        .then(response => response.headers.get('date'))
+        .then(dateTimeString => {
+          if(dateTimeString) {
+            const date = new Date(dateTimeString);
+            const timeString = date.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+            const dateString = date.toLocaleDateString([], {day: '2-digit', month: 'short'});
+            document.getElementById('timeDisplay').innerHTML = `<strong>Your Time:</strong> ${getLocalTime()} • <strong>Site Time:</strong> ${timeString}, ${dateString}`;
+          } else {
+            console.error('Site time unavailable');
+            document.getElementById('timeDisplay').innerHTML = `<strong>Your Time:</strong> ${getLocalTime()} • <strong>Site Time:</strong> <em>Site time unavailable</em>`;
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching site time:', error);
+          document.getElementById('timeDisplay').innerHTML = `<strong>Your Time:</strong> ${getLocalTime()} • <strong>Site Time:</strong> <em>Site time unavailable</em>`;
+        });
+    }
+
+    // Fetch site time once when the page loads
+    window.onload = getSiteTime;
+  </script>
+
+
+
+
+
+
+
+</body></html> 
 
 <!-- 
 CITATION METRICS
 According to GoogleSholar, my works attracted more than 130 citations, my h-index is 6, and my i10-index (number of papers with at least 10 citations) is 4. 
  -->
+ 
